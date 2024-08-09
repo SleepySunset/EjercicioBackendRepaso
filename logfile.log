@@ -1,0 +1,60 @@
+[2024-08-08 20:40:12] [ ERROR] [VeterinarioServiceTest:30] [crearTablas] Error de Sintaxis en sentencia SQL "\000d\000a\000d\000aCREATE TABLE VETERINARIO(\000d\000aID INT [*]AUTO_INCREMENTAL PRIMARY KEY,\000d\000aNROLICENCIA INT NOT NULL,\000d\000aNOMBRE VARCHAR(25) NOT NULL,\000d\000aAPELLIDO VARCHAR(25) NOT NULL,\000d\000aESPECIALIDAD VARCHAR(50) NOT NULL,\000d\000a)"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, DEFAULT, GENERATED, ON UPDATE, NOT NULL, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "\000d\000a\000d\000aCREATE TABLE VETERINARIO(\000d\000aID INT [*]AUTO_INCREMENTAL PRIMARY KEY,\000d\000aNROLICENCIA INT NOT NULL,\000d\000aNOMBRE VARCHAR(25) NOT NULL,\000d\000aAPELLIDO VARCHAR(25) NOT NULL,\000d\000aESPECIALIDAD VARCHAR(50) NOT NULL,\000d\000a)"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, DEFAULT, GENERATED, ON UPDATE, NOT NULL, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+
+
+CREATE TABLE VETERINARIO(
+ID INT AUTO_INCREMENTAL PRIMARY KEY,
+NROLICENCIA INT NOT NULL,
+NOMBRE VARCHAR(25) NOT NULL,
+APELLIDO VARCHAR(25) NOT NULL,
+ESPECIALIDAD VARCHAR(50) NOT NULL,
+) [42001-230]
+[2024-08-08 20:41:33] [ ERROR] [VeterinarioServiceTest:30] [crearTablas] Error de Sintaxis en sentencia SQL "\000d\000a\000d\000aCREATE TABLE VETERINARIOS(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aNROLICENCIA INT NOT NULL,\000d\000aNOMBRE VARCHAR(25) NOT NULL,\000d\000aAPELLIDO VARCHAR(25) NOT NULL,\000d\000aESPECIALIDAD VARCHAR(50) NOT NULL,\000d\000a[*])"; se esperaba "identifier"
+Syntax error in SQL statement "\000d\000a\000d\000aCREATE TABLE VETERINARIOS(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aNROLICENCIA INT NOT NULL,\000d\000aNOMBRE VARCHAR(25) NOT NULL,\000d\000aAPELLIDO VARCHAR(25) NOT NULL,\000d\000aESPECIALIDAD VARCHAR(50) NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+
+
+CREATE TABLE VETERINARIOS(
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NROLICENCIA INT NOT NULL,
+NOMBRE VARCHAR(25) NOT NULL,
+APELLIDO VARCHAR(25) NOT NULL,
+ESPECIALIDAD VARCHAR(50) NOT NULL,
+) [42001-230]
+[2024-08-08 20:43:22] [ ERROR] [VeterinarioServiceTest:30] [crearTablas] Error de Sintaxis en sentencia SQL "\000d\000aCREATE TABLE VETERINARIOS(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aNROLICENCIA INT NOT NULL,\000d\000aNOMBRE VARCHAR(25) NOT NULL,\000d\000aAPELLIDO VARCHAR(25) NOT NULL,\000d\000aESPECIALIDAD VARCHAR(50) NOT NULL,\000d\000a[*])"; se esperaba "identifier"
+Syntax error in SQL statement "\000d\000aCREATE TABLE VETERINARIOS(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aNROLICENCIA INT NOT NULL,\000d\000aNOMBRE VARCHAR(25) NOT NULL,\000d\000aAPELLIDO VARCHAR(25) NOT NULL,\000d\000aESPECIALIDAD VARCHAR(50) NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+
+CREATE TABLE VETERINARIOS(
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NROLICENCIA INT NOT NULL,
+NOMBRE VARCHAR(25) NOT NULL,
+APELLIDO VARCHAR(25) NOT NULL,
+ESPECIALIDAD VARCHAR(50) NOT NULL,
+) [42001-230]
+[2024-08-08 20:46:05] [ ERROR] [VeterinarioDaoH2:41] [guardarVeterinario] Tabla "VETERINARIO" no encontrada
+Table "VETERINARIO" not found; SQL statement:
+INSERT INTO VETERINARIO VALUES (DEFAULT, ?,?,?,?) [42102-230]
+[2024-08-08 20:46:30] [ INFO ] [VeterinarioDaoH2:38] [guardarVeterinario] veterinario persistido null
+[2024-08-08 20:51:46] [ INFO ] [VeterinarioDaoH2:86] [buscarTodos] Veterinario{id=1, nroLicencia=23323, nombre='BRUNO', apellido='MARTINEZ', especialidad='CARDIOLOGIA'}
+[2024-08-08 20:55:30] [ INFO ] [VeterinarioDaoH2:38] [guardarVeterinario] veterinario persistido null
+[2024-08-08 21:08:09] [ INFO ] [VeterinarioDaoH2:39] [guardarVeterinario] veterinario persistido Veterinario{id=2, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologa'}
+[2024-08-08 21:16:13] [ INFO ] [VeterinarioDaoMemoria:18] [guardarVeterinario] veterinario guardado Veterinario{id=1, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologa'}
+[2024-08-08 21:17:45] [ INFO ] [VeterinarioDaoH2:39] [guardarVeterinario] veterinario persistido Veterinario{id=2, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologa'}
+[2024-08-08 21:17:45] [ INFO ] [VeterinarioDaoH2:87] [buscarTodos] Veterinario{id=1, nroLicencia=23323, nombre='BRUNO', apellido='MARTINEZ', especialidad='CARDIOLOGIA'}
+[2024-08-08 21:17:45] [ INFO ] [VeterinarioDaoH2:87] [buscarTodos] Veterinario{id=2, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologa'}
+[2024-08-08 21:19:44] [ INFO ] [VeterinarioDaoMemoria:18] [guardarVeterinario] veterinario guardado Veterinario{id=1, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologa'}
+[2024-08-08 21:19:53] [ INFO ] [VeterinarioDaoH2:39] [guardarVeterinario] veterinario persistido Veterinario{id=2, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologa'}
+[2024-08-08 21:19:57] [ INFO ] [VeterinarioDaoH2:87] [buscarTodos] Veterinario{id=1, nroLicencia=23323, nombre='BRUNO', apellido='MARTINEZ', especialidad='CARDIOLOGIA'}
+[2024-08-08 21:25:12] [ INFO ] [VeterinarioDaoMemoria:18] [guardarVeterinario] veterinario guardado Veterinario{id=1, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologa'}
+[2024-08-08 21:25:12] [ INFO ] [VeterinarioDaoMemoria:25] [buscarTodos] Veterinario{id=1, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologa'}
+[2024-08-08 21:26:06] [ INFO ] [VeterinarioDaoMemoria:18] [guardarVeterinario] veterinario guardado Veterinario{id=1, nroLicencia=3313131, nombre='Laura', apellido='Lopez', especialidad='Dermatologa'}
+[2024-08-08 21:26:06] [ INFO ] [VeterinarioDaoMemoria:18] [guardarVeterinario] veterinario guardado Veterinario{id=2, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologa'}
+[2024-08-08 21:26:06] [ INFO ] [VeterinarioDaoMemoria:25] [buscarTodos] Veterinario{id=1, nroLicencia=3313131, nombre='Laura', apellido='Lopez', especialidad='Dermatologa'}
+[2024-08-08 21:26:06] [ INFO ] [VeterinarioDaoMemoria:25] [buscarTodos] Veterinario{id=2, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologa'}
+[2024-08-08 21:27:36] [ INFO ] [VeterinarioDaoMemoria:18] [guardarVeterinario] veterinario guardado Veterinario{id=1, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologia'}
+[2024-08-08 21:27:36] [ INFO ] [VeterinarioDaoMemoria:18] [guardarVeterinario] veterinario guardado Veterinario{id=1, nroLicencia=3313131, nombre='Laura', apellido='Lopez', especialidad='Dermatologia'}
+[2024-08-08 21:27:36] [ INFO ] [VeterinarioDaoMemoria:18] [guardarVeterinario] veterinario guardado Veterinario{id=2, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologia'}
+[2024-08-08 21:27:36] [ INFO ] [VeterinarioDaoMemoria:25] [buscarTodos] Veterinario{id=1, nroLicencia=3313131, nombre='Laura', apellido='Lopez', especialidad='Dermatologia'}
+[2024-08-08 21:27:36] [ INFO ] [VeterinarioDaoMemoria:25] [buscarTodos] Veterinario{id=2, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologia'}
+[2024-08-08 21:28:08] [ INFO ] [VeterinarioDaoH2:39] [guardarVeterinario] veterinario persistido Veterinario{id=2, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologia'}
+[2024-08-08 21:28:08] [ INFO ] [VeterinarioDaoH2:87] [buscarTodos] Veterinario{id=1, nroLicencia=23323, nombre='BRUNO', apellido='MARTINEZ', especialidad='CARDIOLOGIA'}
+[2024-08-08 21:28:08] [ INFO ] [VeterinarioDaoH2:87] [buscarTodos] Veterinario{id=2, nroLicencia=3313131, nombre='Maria', apellido='Jimenez', especialidad='Oftalmologia'}

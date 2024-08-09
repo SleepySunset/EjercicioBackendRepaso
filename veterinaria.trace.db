@@ -1,0 +1,4 @@
+2024-08-08 20:46:05.773674-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "VETERINARIO" no encontrada
+Table "VETERINARIO" not found; SQL statement:
+INSERT INTO VETERINARIO VALUES (DEFAULT, ?,?,?,?) [42102-230]
